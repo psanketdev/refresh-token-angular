@@ -1,0 +1,9 @@
+<p>Hello, I am About component!</p>
+<div>
+  <h2>Data coming from parent: {{pData}}</h2>
+</div>
+
+<div>
+  <h3>Data send from child to parent using output metadata</h3>
+  Child Input: <input type="text" #childCom (keyup)="sendData(childCom.value)">
+</div>

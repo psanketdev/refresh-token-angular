@@ -1,0 +1,13 @@
+<section>
+  <form class="login">
+    <h2>Welcome, User!</h2>
+    <p>Please log in</p>
+    <input type="text" placeholder="User Name" name="emailId" [(ngModel)]="loginObj.emailId" />
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="loginObj.password" />
+    <input type="submit" value="Log In" (click)="submitForm()" />
+    <div class="links">
+      <a href="#">Forgot password</a>
+      <a href="#">Register</a>
+    </div>
+  </form>
+</section>
