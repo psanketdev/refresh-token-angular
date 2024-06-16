@@ -23,7 +23,6 @@ export class UserService {
   }
 
   getRefreshToken(): any {
-    debugger;
     let localUserData: any = {};
     let localData = typeof window !== 'undefined' ? localStorage.getItem('user') : null;
     if(localData != null) {

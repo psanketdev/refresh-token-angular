@@ -4,7 +4,6 @@ import { catchError, throwError } from 'rxjs';
 import { UserService } from './user.service';
 
 export const customeInterceptor: HttpInterceptorFn = (req, next) => {
-  debugger;
   const _userService = inject(UserService);
   let localUserData: any = {};
   let localData = typeof window !== 'undefined' ? localStorage.getItem('user') : null;
@@ -19,7 +18,6 @@ export const customeInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(cloneReq).pipe(
     catchError((error: HttpErrorResponse) => {
-      debugger;
       if (error.status === 401) {
         const isRefresh = confirm('Do you want to continue?');
         if (isRefresh) {

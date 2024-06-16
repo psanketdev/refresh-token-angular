@@ -23,7 +23,6 @@ export class LoginComponent {
 
 
   submitForm() {
-    debugger; 
     this.userSer.onLogin(this.loginObj).subscribe((res) => {
       if(res.result && typeof window !== 'undefined' && window.localStorage) {
         localStorage.setItem('user', JSON.stringify(res.data));
